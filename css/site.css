@@ -1,0 +1,110 @@
+body {
+  background-color: #333;
+  background-image: url("/img/star-bg.svg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fbf8f4;
+  font-family: 'Fira Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: stretch;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Patua One', sans-serif;
+}
+#ap-bg-canvas {
+  max-width: 100%;
+  max-height: 100%;
+  position: fixed;
+  left: 0;
+  z-index: -1;
+}
+header {
+  background-color: rgba(17, 17, 17, 0.7);
+}
+main {
+  background-color: transparent;
+  flex-grow: 1;
+}
+main.tmpl-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.tmpl-home .ap-billboard {
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #f1e4d7;
+  display: flex;
+}
+main.tmpl-home .ap-billboard .ap-billboard__left-column {
+  padding-right: 2rem;
+}
+main.tmpl-home .ap-billboard .ap-billboard__left-column img {
+  border-radius: 50%;
+  max-width: 150px;
+}
+main.tmpl-home .ap-billboard .ap-billboard__right-column {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+main.tmpl-home .ap-billboard .ap-billboard__right-column .ap-billboard__right-column__text {
+  flex-grow: 1;
+}
+main.tmpl-home .ap-billboard .ap-billboard__right-column .ap-billboard__right-column__logos a {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 2px;
+  margin-right: 0.25em;
+}
+main.tmpl-home .ap-billboard .ap-billboard__right-column .ap-billboard__right-column__logos a:hover {
+  background-color: #000;
+}
+.ap-post {
+  max-width: 50%;
+}
+footer {
+  background-color: rgba(17, 17, 17, 0.3);
+  display: flex;
+  justify-content: space-between;
+}
+footer .ap-footer-postlist {
+  margin-left: 2rem;
+  font-size: small;
+  font-family: sans-serif;
+}
+footer .ap-footer-flag {
+  align-self: end;
+}
+footer .ap-footer-flag img {
+  border-radius: 2px;
+  margin: 1rem;
+  opacity: 40%;
+}
+/* unvisited link */
+a:link {
+  color: #fbf8f4;
+}
+/* visited link */
+a:visited {
+  color: #fbf8f4;
+}
+/* mouse over link */
+a:hover {
+  color: #f1e4d7;
+}
+/* selected link */
+a:active {
+  color: #f1e4d7;
+}

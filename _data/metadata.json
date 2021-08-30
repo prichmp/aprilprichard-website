@@ -1,0 +1,21 @@
+{
+  "title": "April Prichard",
+  "url": "https://aprilprichard.net/",
+  "language": "en",
+  "description": "The personal blog for April Prichard",
+  "feed": {
+    "subtitle": "The personal blog for April Prichard.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://aprilprichard.net/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://example.com/feed/feed.json"
+  },
+  "author": {
+    "name": "April Prichard",
+    "email": "example@example.com",
+    "url": "https://aprilprichard.net/"
+  }
+}
