@@ -8,6 +8,7 @@
     "pack:watch": "webpack --config webpack.config.js --watch --mode development",
     "less": "gulp lessCompile",
     "less:watch": "gulp lessWatch",
+    "eleventy": "eleventy",
     "build": "run-s pack less eleventy",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
