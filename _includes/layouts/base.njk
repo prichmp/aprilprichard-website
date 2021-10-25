@@ -29,17 +29,17 @@
         <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
 
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-        <ul class="nav">
+        {# <ul class="nav">
         {%- for entry in collections.all | eleventyNavigation %}
           <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
         {%- endfor %}
-        </ul>
+        </ul> #}
       </div>
       <div class="ap-footer-postlist">
-        {% set maxPosts = collections.posts.length | min(3) %}
+        {# {% set maxPosts = collections.posts.length | min(3) %}
         {% set postslist = collections.posts | head(-3) %}
         {% set postslistCounter = collections.posts | length %}
-        {% include "postslist.njk" %}
+        {% include "postslist.njk" %} #}
       </div>
       <div class="ap-footer-flag">
         <img alt="Transgender flag" src="/img/transflag.png" />

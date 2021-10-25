@@ -4,10 +4,11 @@
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
     "run": "run-p pack:watch less:watch serve",
+    "pack": "webpack --config webpack.config.js --watch --mode production",
     "pack:watch": "webpack --config webpack.config.js --watch --mode development",
     "less": "gulp lessCompile",
     "less:watch": "gulp lessWatch",
-    "build": "eleventy",
+    "build": "run-s pack less eleventy",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
     "start": "eleventy --serve",
