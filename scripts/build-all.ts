@@ -15,9 +15,9 @@ type Project = { name: string; repo: string; subpath: string };
 
 const projects: Project[] = [
     { name: 'frank-stella-generative-art', repo: 'https://github.com/prichmp/frank-stella-generative-art.git', subpath: 'frank-stella-generative-art' },
-    { name: 'reggie',                      repo: 'https://github.com/prichmp/reggie.git',                      subpath: 'reggie' },
-    { name: 'diff-eq-generative-art',      repo: 'https://github.com/prichmp/diff-eq-generative-art.git',      subpath: 'diff-eq-generative-art' },
-    { name: 'bauhaus-solar-system',        repo: 'https://github.com/prichmp/bauhaus-solar-system.git',        subpath: 'bauhaus-solar-system' },
+    { name: 'reggie', repo: 'https://github.com/prichmp/reggie.git', subpath: 'reggie' },
+    { name: 'diff-eq-generative-art', repo: 'https://github.com/prichmp/diff-eq-generative-art.git', subpath: 'diff-eq-generative-art' },
+    { name: 'bauhaus-solar-system', repo: 'https://github.com/prichmp/bauhaus-solar-system.git', subpath: 'bauhaus-solar-system' },
 ];
 
 const args = new Set(process.argv.slice(2));
@@ -53,13 +53,8 @@ function syncRepo(repo: string, target: string): void {
 }
 
 function installDeps(dir: string): void {
-    if (existsSync(join(dir, 'package-lock.json'))) {
-        console.log('  npm ci');
-        run('npm', ['ci'], { cwd: dir });
-    } else {
-        console.log('  npm install');
-        run('npm', ['install'], { cwd: dir });
-    }
+    console.log('  npm install');
+    run('npm', ['install'], { cwd: dir });
 }
 
 function buildProject(dir: string, basePath: string): void {
