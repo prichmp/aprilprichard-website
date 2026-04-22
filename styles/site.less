@@ -1,5 +1,4 @@
-body 
-{
+body {
     background-color: #333;
     background-image: url("/img/star-bg.svg");
     background-attachment: fixed;
@@ -15,13 +14,15 @@ body
     align-items: stretch;
 }
 
-h1, h2, h3, h4, h5
-{
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Patua One', sans-serif;
-} 
+}
 
-#ap-bg-canvas
-{
+#ap-bg-canvas {
     max-width: 100%;
     max-height: 100%;
     position: fixed;
@@ -29,78 +30,70 @@ h1, h2, h3, h4, h5
     z-index: -1;
 }
 
-header 
-{
+header {
     background-color: rgba(17, 17, 17, 0.7);
 }
 
-main 
-{
+main {
+    display: flex;
+    flex-direction: column;
     background-color: transparent;
     flex-grow: 1;
 }
 
-main.tmpl-home
-{ 
-    display:flex;
+main.tmpl-home {
+    display: flex;
     align-items: center;
     justify-content: center;
 
-    .ap-billboard
-    {
+    .ap-billboard {
         background-color: #333;
         padding: 2rem;
         border-radius: 1rem;
         color: #f1e4d7;
+        max-width: 900px;
+        width: 100%;
 
-        display:flex;
+        display: flex;
         flex-wrap: wrap;
 
 
-        .ap-billboard__left-column 
-        {
+        .ap-billboard__left-column {
             padding-right: 2rem;
             padding-bottom: 2rem;
             margin-left: auto;
             margin-right: auto;
 
-            img 
-            {
+            img {
                 border-radius: 50%;
                 max-width: 150px;
             }
         }
 
-        .ap-billboard__right-column
-        {
+        .ap-billboard__right-column {
             max-width: 600px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: stretch;
 
-            .ap-billboard__right-column__text 
-            {
+            .ap-billboard__right-column__text {
                 flex-grow: 1;
             }
 
-            .ap-billboard__right-column__logos
-            {
-                a 
-                {
+            .ap-billboard__right-column__logos {
+                a {
                     display: inline-block;
                     padding: 0.5rem;
                     border-radius: 2px;
                     margin-right: 0.25em;
                 }
 
-                a:hover 
-                {
+                a:hover {
                     background-color: #000;
                 }
 
-                img 
-                {
+                img {
                     padding: 0.75rem;
                 }
             }
@@ -108,29 +101,58 @@ main.tmpl-home
     }
 }
 
-.ap-post 
-{
+.ap-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .ap-section__link {
+
+        background-color: #333;
+        padding: 2rem;
+        margin: 1rem 2rem 0 2rem;
+        border-radius: 1rem;
+        color: #f1e4d7;
+        flex-grow: 1;
+        max-width: 900px;
+        width: 100%;
+
+        &:hover {
+            background-color: #000;
+        }
+
+        a 
+        {
+            display: inline;
+        }
+    }
+
+    .ap-section__title {
+        font-weight: 700;
+    }
+}
+
+.ap-post {
     max-width: 50%;
 }
 
-footer 
-{
+footer {
     background-color: rgba(17, 17, 17, 0.3);
     display: flex;
     justify-content: space-between;
 
-    .ap-footer-postlist
-    {
+    .ap-footer-postlist {
         margin-left: 2rem;
         font-size: small;
         font-family: sans-serif;
     }
 
-    .ap-footer-flag
-    {
+    .ap-footer-flag {
         align-self: end;
-        img 
-        {
+
+        img {
             border-radius: 2px;
             margin: 1rem;
             opacity: 40%;
@@ -139,22 +161,22 @@ footer
 
 }
 
- /* unvisited link */
- a:link {
+/* unvisited link */
+a:link {
     color: #fbf8f4;
-  }
-  
-  /* visited link */
-  a:visited {
+}
+
+/* visited link */
+a:visited {
     color: #fbf8f4;
-  }
-  
-  /* mouse over link */
-  a:hover {
+}
+
+/* mouse over link */
+a:hover {
     color: #f1e4d7;
-  }
-  
-  /* selected link */
-  a:active {
+}
+
+/* selected link */
+a:active {
     color: #f1e4d7;
-  } 
+}
